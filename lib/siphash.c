@@ -5,19 +5,11 @@
  * SipHash: a fast short-input PRF
  * https://131002.net/siphash/
  *
-<<<<<<< HEAD
-<<<<<<< HEAD
+
  * This implementation is specifically for SipHash2-4 for a secure PRF
  * and HalfSipHash1-3/SipHash1-3 for an insecure PRF only suitable for
  * hashtables.
-=======
- * This implementation is specifically for SipHash2-4.
->>>>>>> siphash: add cryptographically secure PRF
-=======
- * This implementation is specifically for SipHash2-4 for a secure PRF
- * and HalfSipHash1-3/SipHash1-3 for an insecure PRF only suitable for
- * hashtables.
->>>>>>> siphash: implement HalfSipHash1-3 for hash tables
+
  */
 
 #include <linux/siphash.h>
@@ -559,4 +551,3 @@ u32 hsiphash_4u32(const u32 first, const u32 second, const u32 third,
 }
 EXPORT_SYMBOL(hsiphash_4u32);
 #endif
-

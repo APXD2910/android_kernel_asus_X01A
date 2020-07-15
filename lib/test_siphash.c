@@ -7,19 +7,14 @@
  * SipHash: a fast short-input PRF
  * https://131002.net/siphash/
  *
-<<<<<<< HEAD
-<<<<<<< HEAD
+
  * This implementation is specifically for SipHash2-4 for a secure PRF
  * and HalfSipHash1-3/SipHash1-3 for an insecure PRF only suitable for
  * hashtables.
-=======
- * This implementation is specifically for SipHash2-4.
->>>>>>> siphash: add cryptographically secure PRF
-=======
  * This implementation is specifically for SipHash2-4 for a secure PRF
  * and HalfSipHash1-3/SipHash1-3 for an insecure PRF only suitable for
  * hashtables.
->>>>>>> siphash: implement HalfSipHash1-3 for hash tables
+
  */
 
 #define pr_fmt(fmt) KBUILD_MODNAME ": " fmt
@@ -32,6 +27,7 @@
 
 /* Test vectors taken from reference source available at:
  *     https://github.com/veorq/SipHash
+<<<<<<< HEAD
 =======
 /* Test vectors taken from official reference source available at:
  *     https://131002.net/siphash/siphash24.c
@@ -40,6 +36,8 @@
 /* Test vectors taken from reference source available at:
  *     https://github.com/veorq/SipHash
 >>>>>>> siphash: implement HalfSipHash1-3 for hash tables
+=======
+>>>>>>> v4.9.190
  */
 
 static const siphash_key_t test_key_siphash =
@@ -129,7 +127,6 @@ static const u32 test_vectors_hsiphash[64] = {
 };
 #endif
 
-
 static int __init siphash_test_init(void)
 {
 	u8 in[64] __aligned(SIPHASH_ALIGNMENT);
@@ -161,7 +158,6 @@ static int __init siphash_test_init(void)
 			pr_info("hsiphash self-test unaligned %u: FAIL\n", i + 1);
 			ret = -EINVAL;
 		}
-
 	}
 	if (siphash_1u64(0x0706050403020100ULL, &test_key_siphash) !=
 						test_vectors_siphash[8]) {
@@ -207,7 +203,7 @@ static int __init siphash_test_init(void)
 		pr_info("siphash self-test 4u32: FAIL\n");
 		ret = -EINVAL;
 	}
-
+	
 	if (hsiphash_1u32(0x03020100U, &test_key_hsiphash) !=
 						test_vectors_hsiphash[4]) {
 		pr_info("hsiphash self-test 1u32: FAIL\n");

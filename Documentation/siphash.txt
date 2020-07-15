@@ -99,8 +99,6 @@ u64 h = siphash(&combined, offsetofend(typeof(combined), dport), &secret);
 Read the SipHash paper if you're interested in learning more:
 https://131002.net/siphash/siphash.pdf
 
-<<<<<<< HEAD
-=======
 
 ~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~
 
@@ -175,4 +173,7 @@ HalfSipHash is roughly 3 times slower than JenkinsHash. For many replacements,
 this will not be a problem, as the hashtable lookup isn't the bottleneck. And
 in general, this is probably a good sacrifice to make for the security and DoS
 resistance of HalfSipHash.
+<<<<<<< HEAD
 >>>>>>> siphash: implement HalfSipHash1-3 for hash tables
+=======
+>>>>>>> v4.9.190
