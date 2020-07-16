@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 /* Copyright (C) 2016 Jason A. Donenfeld <Jason@zx2c4.com>. All Rights Reserved.
  *
  * This file is provided under a dual BSD/GPLv2 license.
@@ -140,4 +139,3 @@ static inline u32 hsiphash(const void *data, size_t len,
 }
 
 #endif /* _LINUX_SIPHASH_H */
->>>>>>> parent of b97a2f3d58f4... inet: switch IP ID generator to siphash
